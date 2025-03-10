@@ -5,9 +5,9 @@ const app = express();
 
 app.use(express.json());
 
-// cron.schedule('* * * * *', () => {
-//     console.log("Running a task every minute");
-// })
+cron.schedule('* * * * *', () => {
+    console.log("Running a task every minute");
+})
 
 // cron.schedule('*/2 * * * *', () => {
 //     console.log("running a task every two minutes");
@@ -25,14 +25,15 @@ app.use(express.json());
 //     console.log('running on Sundays of January and September');
 // });
 
-let task = cron.schedule('* * * * *', () => {
-    console.log('will execute every minute until stopped');
-}, {
-    scheduled: false
-})
 
-// task.start();
-// task.stop();
+// let task = cron.schedule('* * * * *', () => {
+//     console.log('will execute every minute until stopped');
+// }, {
+//     scheduled: false
+// })
+
+// // task.start();
+// // task.stop();
 
 
 app.listen(3000, () => {
