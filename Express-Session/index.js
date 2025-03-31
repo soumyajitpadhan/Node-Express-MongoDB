@@ -57,3 +57,4 @@ app.listen(3000, () => console.log("Server is running on port 3000"));
 // maxAge: 60000 means the session will expire in 60 seconds (1 minute).
 // After that, the session will be deleted, and the user will have to start over.
 
+// By default, when using express-session, session data is stored in-memory (RAM) on the server.
